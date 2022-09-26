@@ -170,6 +170,7 @@
   /* Shopping cart*/
 #shoppingCartContainer {
   padding: 0 24px;
+  width: 100%;
 }
 
   .title-container {

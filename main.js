@@ -4,37 +4,34 @@ const menuCarritoicon = document.querySelector('.navbar-shopping-cart');
 
 const desktopMenu = document.querySelector('.desktop-menu');
 const mobileMenu = document.querySelector('.mobile-menu');
-const aside = document.querySelector('.product-detail');
+const shoppingcartcontainer = document.querySelector('#shoppingCartContainer');
 const cardsContainer = document.querySelector('.cards-container');
 
 
 
 menuEmail.addEventListener('click', toggleDesktopMenu);
 menuHamIcon.addEventListener('click', toggleMobileMenu);
-menuCarritoicon.addEventListener('click', toggleCarritoAside);
-
-
-
+menuCarritoicon.addEventListener('click', toggleCarritoShoppingCartContainer);
 
 function toggleDesktopMenu() {
-    const isAsideClosed = aside.classList.contains('inactive')
-    if (!isAsideClosed) {
-        aside.classList.add('inactive');
+    const isShoppingCartContainerClosed = shoppingcartcontainer.classList.contains('inactive')
+    if (!isShoppingCartContainerClosed) {
+        shoppingcartcontainer.classList.add('inactive');
     };
   
     desktopMenu.classList.toggle('inactive');
 }
 
 function toggleMobileMenu() {
-    const isAsideClosed = aside.classList.contains('inactive')
-    if (!isAsideClosed) {
-        aside.classList.add('inactive');
+    const isShoppingCartContainerClosed = shoppingcartcontainer.classList.contains('inactive')
+    if (!isShoppingCartContainerClosed) {
+        shoppingcartcontainer.classList.add('inactive');
     };
 
     mobileMenu.classList.toggle('inactive');
 }
 
-function toggleCarritoAside () {
+function toggleCarritoShoppingCartContainer () {
     const isMobilMenuClosed = mobileMenu.classList.contains('inactive');
     const isDesktopMenuClosed = desktopMenu.classList.contains('inactive')
 
@@ -45,7 +42,7 @@ function toggleCarritoAside () {
     if (!isDesktopMenuClosed) {
         desktopMenu.classList.add('inactive');
     };
-    aside.classList.toggle('inactive')
+    shoppingcartcontainer.classList.toggle('inactive')
 }
 
 const productsList = [];
@@ -69,26 +66,7 @@ productsList.push({
     price: 15,
     imagen: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
 });
-productsList.push({
-    name: 'Bike',
-    price: 120,
-    imagen: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
-productsList.push({
-    name: 'Casco',
-    price: 40,
-    imagen: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
-productsList.push({
-    name: 'Tenis',
-    price: 89,
-    imagen: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
-productsList.push({
-    name: 'Bote de Agua',
-    price: 15,
-    imagen: 'https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-});
+
 
 /* <div class="product-card">
   <img src="https://images.pexels.com/photos/276517/pexels-photo-276517.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
